@@ -1,6 +1,13 @@
+import fileinput
+
 def main():
-    getal1 = input("Input number 1: ...")
-    getal2 = input("Input number 2: ...")
+    lines = []
+    for line in fileinput.input():
+        lines.append(line)
+    getal1 = lines[0]
+    getal2 = lines[1]
+
+    # g1, g2 = [int(line) for line in fileinput.input()]
     calc(int(getal1), int(getal2))
 
 
